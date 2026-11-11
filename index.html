@@ -116,9 +116,11 @@ section.report-sec { padding: 64px var(--pad-x); border-top: 1px solid var(--gap
 .cover .bignum .cap { font-size: 1.02rem; line-height: 1.45; color: rgba(252,252,252,0.72); max-width: 32ch; padding-bottom: 6px; }
 .hbar { margin-top: 34px; display: flex; gap: 4px; height: 54px; border-radius: 12px; overflow: hidden; }
 .hbar div { display: flex; align-items: center; padding: 0 16px; font-family: var(--ps-font-secondary); font-weight: 700; font-size: 0.86rem; white-space: nowrap; }
-.hbar .b1 { width: 57.14%; background: var(--ps-primary-200); color: #fff; }
-.hbar .b2 { width: 9.52%; background: var(--ps-accent4-300); color: var(--ps-primary-500); justify-content: center; padding: 0 6px; }
+.hbar .b1 { width: 85.71%; background: var(--ps-primary-200); color: #fff; }
+.hbar .b2 { width: 14.29%; background: var(--ps-accent4-300); color: var(--ps-primary-500); justify-content: center; padding: 0 6px; }
 .hbar .b3 { width: 33.33%; background: var(--ps-accent1-300); color: var(--ps-primary-500); }
+.coachline { margin-top: 18px; display: flex; align-items: center; gap: 16px; padding: 14px 18px; border: 1.5px dashed rgba(0,211,173,0.7); border-radius: 12px; font-size: 0.95rem; line-height: 1.45; color: rgba(252,252,252,0.9); }
+.coachline b { flex: none; font-family: var(--ps-font-secondary); font-weight: 700; font-size: 1.15rem; color: var(--ps-accent1-300); }
 .hbarkey { margin-top: 10px; font-size: 0.8rem; color: rgba(252,252,252,0.55); }
 .cover .meta { display: flex; margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.16); padding-top: 26px; }
 .cover .meta .item { padding-right: 48px; }
@@ -319,15 +321,15 @@ section.report-sec { padding: 64px var(--pad-x); border-top: 1px solid var(--gap
     <p class="sub">A virtual product management program for 300 Northwestern Mutual participants across three courses, with the first 12 modules (PMC and PLC) delivered before April day one.</p>
 
     <div class="bignum">
-      <div class="num">63<small>hrs</small></div>
-      <div class="cap">Total program hours: 42 required for each participant, plus 21 optional coaching hours for each group of 100.</div>
+      <div class="num">36<small>hrs</small></div>
+      <div class="cap">Live instructor-led training for each participant, plus 6 hours of capstone demoing (three 2-hour Demo Days).</div>
     </div>
-    <div class="hbar" role="img" aria-label="63 hours: 36 hours live instructor-led training, 6 Demo Day, 21 coaching">
+    <div class="hbar" role="img" aria-label="36 hours live instructor-led training and 6 hours capstone demoing">
       <div class="b1">36 hours live instructor-led training</div>
-      <div class="b2">6</div>
-      <div class="b3">21 hrs coaching</div>
+      <div class="b2">6 hrs capstone demos</div>
     </div>
-    <p class="hbarkey">Blue: live instructor-led training across 18 modules. Violet: Demo Days (6 hrs). Teal: coaching and office hours (optional).</p>
+    <div class="coachline"><b>+ 21 hrs coaching</b><span>Allocated separately for each group of 100, and optional. Share it across the whole group as 21 individual 1-hour sessions, or divide it by cohort at roughly 5 hours each.</span></div>
+    <p class="hbarkey">Blue: live instructor-led training across 18 modules. Violet: capstone demos, one 2-hour Demo Day per course.</p>
 
     <div class="meta">
       <div class="item"><div class="k">300</div><div class="l">Participants</div></div>
@@ -342,22 +344,21 @@ section.report-sec { padding: 64px var(--pad-x); border-top: 1px solid var(--gap
 <section class="report-sec" id="hours">
   <p class="sec-eyebrow">01 · Hours by part</p>
   <h2 class="sec-title">Every hour, listed by part.</h2>
-  <p class="sec-lede">Three courses, six modules each. Every 2-hour module is paired with 1 hour of office hours, and each course closes with a mandatory Demo Day. Coaching is its own line so it is easy to see, and easy to size.</p>
+  <p class="sec-lede">Three courses, six modules each. Every 2-hour module is paired with 1 hour of office hours, and each course closes with a mandatory Demo Day. Coaching is its own line, allocated separately from required hours, so it is easy to see and easy to size.</p>
 
   <table class="tbl">
     <thead>
-      <tr><th>Part</th><th class="n">Modules</th><th class="n">Live instructor-led training</th><th class="n">Demo Day</th><th class="n">Coaching (optional)</th><th class="n">Total</th></tr>
+      <tr><th>Part</th><th class="n">Modules</th><th class="n">Live instructor-led training</th><th class="n">Capstone demo</th><th class="n">Required</th></tr>
     </thead>
     <tbody>
-      <tr><td class="part"><i class="dotc" style="background:var(--ps-primary-300)"></i>PMC<span>Product Management Certification · before April</span></td><td class="n">6</td><td class="n">12 hrs</td><td class="n">2 hrs</td><td class="n">7 hrs</td><td class="n">21 hrs</td></tr>
-      <tr><td class="part"><i class="dotc" style="background:var(--ps-accent4-400)"></i>PLC<span>Product Leadership Certification · before April</span></td><td class="n">6</td><td class="n">12 hrs</td><td class="n">2 hrs</td><td class="n">7 hrs</td><td class="n">21 hrs</td></tr>
-      <tr><td class="part"><i class="dotc" style="background:var(--ps-accent2-400)"></i>AIPC<span>AI Product Management Certification · after day one</span></td><td class="n">6</td><td class="n">12 hrs</td><td class="n">2 hrs</td><td class="n">7 hrs</td><td class="n">21 hrs</td></tr>
-      <tr class="sub"><td class="part">Required hours<span>Live instructor-led training and Demo Days</span></td><td class="n">18</td><td class="n">36 hrs</td><td class="n">6 hrs</td><td class="n">&nbsp;</td><td class="n">42 hrs</td></tr>
-      <tr class="coach"><td class="part">Coaching<span>21 hours per group of 100: 1 hour per 2-hour module, plus 1 hour per course ahead of Demo Day</span></td><td class="n">&nbsp;</td><td class="n">&nbsp;</td><td class="n">&nbsp;</td><td class="n">21 hrs</td><td class="n">21 hrs</td></tr>
-      <tr class="total"><td class="part">Total program hours</td><td class="n">18</td><td class="n">36 hrs</td><td class="n">6 hrs</td><td class="n">21 hrs</td><td class="n">63 hrs</td></tr>
+      <tr><td class="part"><i class="dotc" style="background:var(--ps-primary-300)"></i>PMC<span>Product Management Certification · before April</span></td><td class="n">6</td><td class="n">12 hrs</td><td class="n">2 hrs</td><td class="n">14 hrs</td></tr>
+      <tr><td class="part"><i class="dotc" style="background:var(--ps-accent4-400)"></i>PLC<span>Product Leadership Certification · before April</span></td><td class="n">6</td><td class="n">12 hrs</td><td class="n">2 hrs</td><td class="n">14 hrs</td></tr>
+      <tr><td class="part"><i class="dotc" style="background:var(--ps-accent2-400)"></i>AIPC<span>AI Product Management Certification · after day one</span></td><td class="n">6</td><td class="n">12 hrs</td><td class="n">2 hrs</td><td class="n">14 hrs</td></tr>
+      <tr class="sub"><td class="part">Required hours<span>36 hours of training plus 6 hours of capstone demoing</span></td><td class="n">18</td><td class="n">36 hrs</td><td class="n">6 hrs</td><td class="n">42 hrs</td></tr>
+      <tr class="coach"><td class="part">Coaching, separate and optional<span>21 hours allocated for each group of 100. Share them across the group, or divide them by cohort (see section 04)</span></td><td class="n">&nbsp;</td><td class="n">&nbsp;</td><td class="n">&nbsp;</td><td class="n">21 hrs</td></tr>
     </tbody>
   </table>
-  <p class="note">Included at no additional cost: session recordings and on-demand access to all program content. Coaching is optional and is allocated as 21 hours per group of 100 (four cohorts of 25). Live instructor-led training and Demo Days run in cohorts of 25.</p>
+  <p class="note">Included at no additional cost: session recordings and on-demand access to all program content. Coaching is optional and is allocated as 21 hours for each group of 100 (four cohorts of 25), not per participant. Live instructor-led training and Demo Days run in cohorts of 25.</p>
 </section>
 
 <section class="report-sec" id="sprint">
@@ -434,11 +435,11 @@ section.report-sec { padding: 64px var(--pad-x); border-top: 1px solid var(--gap
 
   <div class="sum-grid">
     <div class="sum hl"><div class="k">24 hrs</div><div class="v">Live modules, 12 modules</div></div>
-    <div class="sum"><div class="k">4 hrs</div><div class="v">Demo Days, weeks 3 and 6</div></div>
-    <div class="sum"><div class="k">14 hrs</div><div class="v">Optional coaching, per group of 100</div></div>
-    <div class="sum"><div class="k">42 hrs</div><div class="v">Total before April, 28 of them required</div></div>
+    <div class="sum"><div class="k">4 hrs</div><div class="v">Capstone demos, weeks 3 and 6</div></div>
+    <div class="sum"><div class="k">14 hrs</div><div class="v">Optional coaching, from the 21 allocated per group of 100</div></div>
+    <div class="sum"><div class="k">28 hrs</div><div class="v">Training and capstone demos before April</div></div>
   </div>
-  <div class="after"><b>After day one:</b> AIPC, 6 modules and 12 hours of live instructor-led training, plus its Demo Day (2 hrs) and 7 hours of coaching, 21 hours in total. The cadence is set with Northwestern Mutual and does not need to follow the sprint rhythm.</div>
+  <div class="after"><b>After day one:</b> AIPC, 6 modules and 12 hours of live instructor-led training, plus its capstone Demo Day (2 hrs), 14 required hours in total. The remaining 7 hours of the coaching allocation are available alongside it. The cadence is set with Northwestern Mutual and does not need to follow the sprint rhythm.</div>
 
   <div class="opts">
     <div class="opt rec">
@@ -587,8 +588,8 @@ section.report-sec { padding: 64px var(--pad-x); border-top: 1px solid var(--gap
 
 <section class="report-sec" id="invest">
   <p class="sec-eyebrow">06 · Investment</p>
-  <h2 class="sec-title">One investment covers all 63 hours.</h2>
-  <p class="sec-lede">Live instructor-led training, Demo Days, 21 coaching hours for each group of 100, recordings, and on-demand content for all 300 participants.</p>
+  <h2 class="sec-title">One investment covers the full program.</h2>
+  <p class="sec-lede">Live instructor-led training, capstone demos, 21 coaching hours for each group of 100, recordings, and on-demand content for all 300 participants.</p>
 
   <div class="inv">
     <div class="main">
@@ -599,7 +600,7 @@ section.report-sec { padding: 64px var(--pad-x); border-top: 1px solid var(--gap
     </div>
     <div class="side">
       <div class="sum"><div class="k">$5,250</div><div class="v">Per participant</div></div>
-      <div class="sum"><div class="k">63 hrs</div><div class="v">42 required plus 21 coaching</div></div>
+      <div class="sum"><div class="k">42 hrs</div><div class="v">36 training plus 6 capstone demos, coaching allocated separately</div></div>
     </div>
   </div>
 
